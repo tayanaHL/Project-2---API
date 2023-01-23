@@ -19,8 +19,6 @@ Here I have a Real Estate API based in the GTA, for those looking to own or rent
  - The ability to click on a property to view the description, more images of the property and further info...
 
 
- ![](Agenda.png)
-
  Tech Used :
 
  - HTML 
@@ -32,4 +30,6 @@ Here I have a Real Estate API based in the GTA, for those looking to own or rent
  - EXPRESS
  - API
 
- ERD'S
+ Wireframes and ERD'S
+
+  ![](Agenda.png)
