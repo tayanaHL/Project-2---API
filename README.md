@@ -12,7 +12,8 @@ Here I have a Real Estate API based in the GTA, for those looking to own or rent
  -The ability to scroll down the feed to view propeties for rent and propeties for sale according to the user's preferences.
  -The ability to click on a property to view the description, more images of the property and further info...
 
- ![This is an image](/Project-2---API/Agenda.png)
+
+ ![](Agenda.png)
 
  Tech Used :
 
