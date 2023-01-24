@@ -1,5 +1,3 @@
-// import what I need
-const { Schema, model } = require('./comments.js')
 
 // create the schema
 const UserSchema = new Schema(

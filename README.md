@@ -1,10 +1,10 @@
 # Project2-API
 
-## USER STORIES
+# USER STORIES
 
 Here I have a Real Estate API based in the GTA, for those looking to own or rent a property.
 
- # I want users to be able to:
+ ## I want users to be able to:
 
  - Create an account
  - Sign in
@@ -19,7 +19,7 @@ Here I have a Real Estate API based in the GTA, for those looking to own or rent
  - The ability to click on a property to view the description, more images of the property and further info...
 
 
- # Tech Used :
+ ## Tech Used :
 
  - HTML 
  - CSS
@@ -30,6 +30,6 @@ Here I have a Real Estate API based in the GTA, for those looking to own or rent
  - EXPRESS
  - API
 
- ## Wireframes and ERD'S
+ # Wireframes and ERD'S
 
   ![](Agenda.png)
