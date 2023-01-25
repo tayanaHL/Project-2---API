@@ -1,7 +1,5 @@
 
-module.exports = mongoose
-
-const mongoose = require('mongoose')
+const mongoose = require('../utils/connection')
 
 const { Schema, model } = mongoose
 
@@ -20,3 +18,5 @@ const commentSchema = new Schema({
         required: true
 }
 })
+
+module.exports = commentSchema

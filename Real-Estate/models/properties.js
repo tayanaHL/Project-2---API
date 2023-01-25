@@ -1,7 +1,7 @@
-
-
-const mongoose = require('mongoose')
-
+const mongoose = require('../utils/connection')
+const { url } = require('inspector')
+const commentSchema = require('./comments')
+const favouriteSchema = require('./favourites')
 const { Schema, model } = mongoose
 
 const propertiesSchema = new Schema({
@@ -20,5 +20,9 @@ const propertiesSchema = new Schema({
     description: {
         type: String
     },
+	comment: [commentSchema]
+	,
     favourite: [favouriteSchema] 
 })
+const Properties = model('Property', propertiesSchema)
+module.exports = Properties

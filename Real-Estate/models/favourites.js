@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const mongoose = require('../utils/connection')
 
 const { Schema, model } = mongoose
 
@@ -8,3 +8,4 @@ const favouriteSchema = new Schema({
     } 
  })
 
+ module.exports = favouriteSchema

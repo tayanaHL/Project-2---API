@@ -1,3 +1,6 @@
+const mongoose = require('../utils/connection')
+
+const { Schema, model } = mongoose
 
 // create the schema
 const UserSchema = new Schema(
@@ -9,13 +12,14 @@ const UserSchema = new Schema(
 		},
 		password: { 
 			type: String, 
-			required: true 
+			required: true,
+			minLength: 8
 		}
 	},
 	{ timestamps: true }
 )
 
-// creat the model
+// create the model
 const User = model('User', UserSchema)
 
 // export the model
