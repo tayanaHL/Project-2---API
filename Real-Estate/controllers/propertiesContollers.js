@@ -114,7 +114,7 @@ router.delete('/:id', (req, res) => {
 	const propertyId = req.params.id
 	Property.findByIdAndRemove(propertyId)
 		.then(property => {
-			res.redirect('/examples')
+			res.redirect('/properties')
 		})
 		.catch(error => {
 			res.redirect(`/error?error=${error}`)

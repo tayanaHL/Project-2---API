@@ -14,9 +14,10 @@ router.post('/:commentId', (req, res) => {
         res.sendStatus(401)
     }
     Comments.findById(propertyId)
-        .then(fruit => {
+        .then(comment => {
             //create comment with req body//
             property.comments.push(req.body)
+            return comment.save()
         })
         .then(comments => {
             res.status(201).json({ comments: comments })
