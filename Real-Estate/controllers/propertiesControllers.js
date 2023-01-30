@@ -41,7 +41,7 @@ router.get('/mine', (req, res) => {
     const { username, userId, loggedIn } = req.session
 	Properties.find({ owner: userId })
 		.then(properties => {
-			res.render('examples/index', { properties, username, loggedIn })
+			res.render('properties/index', { properties, username, loggedIn })
 		})
 		.catch(error => {
 			res.redirect(`/error?error=${error}`)
@@ -100,6 +100,7 @@ router.put('/:id', (req, res) => {
 router.get('/:id', (req, res) => {
 	const propertyId = req.params.id
 	Properties.findById(propertyId)
+		.populate('Comments.author', 'username')
 		.then(property => {
             const {username, loggedIn, userId} = req.session
 			res.render('property/show', { property, username, loggedIn, userId })
@@ -113,7 +114,7 @@ router.get('/:id', (req, res) => {
 router.delete('/:id', (req, res) => {
 	const propertyId = req.params.id
 	Property.findByIdAndRemove(propertyId)
-		.then(property => {
+		.then(property => { 
 			res.redirect('/properties')
 		})
 		.catch(error => {

@@ -1,7 +1,28 @@
 {% layout "layout.liquid" %}
 {% block content %}
 
-    <h1>Welcome!</h1>
+  <div id="logo-container">
+    <div id="text-container">
+      <h1>GTA Real Estate</h1>
+
+      <h2>YOLO REALITY</h2>
+    </div>
+    <div id="img-container">
+      <img id="logo" src="./images/house.png">
+    </div>
+  </div>
+  <div id="wrapper">
+    <a href="/auth/signup">
+      <button class="btn1">create an account</button>
+    </a>
+    <a href="/auth/login">
+      <button class="btn2">sign in</button>
+    </a>
+  </div>
+ 
+  <div class="bg"></div>
+  <div class="bg bg2"></div>
+  <div class="bg bg3"></div>
 
 
 {% endblock %}

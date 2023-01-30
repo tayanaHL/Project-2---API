@@ -14,11 +14,11 @@ const Comments = req.body
     Property.findById(propertyId)
         .then(comment => {
             //create comment with req body//
-            property.comments.push(req.body)
+            property.comment.push(req.body)
             return comment.save()
         })
-        .then(comments => {
-            res.status(201).json({ comments: comments })
+        .then(comment => {
+            res.status(201).json({ comment: comment })
         })
         .catch(err => {
             console.log(err)

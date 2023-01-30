@@ -22,13 +22,17 @@ middleware(app)
 //    Routes      //
 ////////////////////
 
-app.use('/users', UserRouter)
+app.use('/auth', UserRouter)
 app.use('/comments', CommentRouter)
 app.use('/properties', PropertiesRouter)
 
 app.get('/', (req, res) => {
     const { username, userId, loggedIn } = req.session
 	res.render('index.liquid', { loggedIn, username, userId })
+})
+app.get('/', (req, res) => {
+    const { username, userId, loggedIn } = req.session
+	res.render('layout.liquid', { loggedIn, username, userId })
 })
 
 app.get('/error', (req, res) => {
