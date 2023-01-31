@@ -28,8 +28,10 @@ router.get('/', (req, res) => {
 			const username = req.session.username
 			const loggedIn = req.session.loggedIn
 			
-			res.render('properties/index', { properties, username, loggedIn })
+			res.render('properties/rent', { properties, username, loggedIn })
+			
 		})
+
 		.catch(error => {
 			res.redirect(`/error?error=${error}`)
 		})
